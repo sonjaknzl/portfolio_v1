@@ -2,13 +2,13 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 import { MathUtils } from "three";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Stats from "three/examples/jsm/libs/stats.module";
 
 gsap.registerPlugin(ScrollTrigger);
 const glbModel = new URL("../assets/phone.glb", import.meta.url);
 const hdrTextureUrl = new URL("../assets/studio.hdr", import.meta.url);
+
+const screenTextureUrl = new URL("../assets/plantify.png", import.meta.url);
+const screenTextureUrl2 = new URL("../assets/plantify2.png", import.meta.url);
 
 class Sketch {
   constructor(options) {
@@ -133,8 +133,39 @@ class Sketch {
             endTrigger: "#container2helper",
             scrub: 1,
             start: "top top",
-
             end: "center center",
+            onUpdate: (self) => {
+              const loader = new THREE.TextureLoader();
+              // console.log(self.progress);
+              if (self.progress < 0.35) {
+                // TEXTURE SWAP
+                loader.load(
+                  screenTextureUrl,
+                  function (texture) {
+                    texture.encoding = THREE.sRGBEncoding;
+                    texture.needsUpdate = true;
+                    screen.children[0].material.map = texture;
+                  },
+                  undefined,
+                  function (error) {
+                    console.error(error);
+                  }
+                );
+              } else {
+                loader.load(
+                  screenTextureUrl2,
+                  function (texture) {
+                    texture.encoding = THREE.sRGBEncoding;
+                    texture.needsUpdate = true;
+                    screen.children[0].material.map = texture;
+                  },
+                  undefined,
+                  function (error) {
+                    console.error(error);
+                  }
+                );
+              }
+            },
           },
         });
       },

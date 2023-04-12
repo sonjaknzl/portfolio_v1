@@ -156,6 +156,7 @@ span {
 .rotation-wrapper-outer {
   position: relative;
   display: table;
+  pointer-events: none;
 }
 .rotation-wrapper-inner {
   padding: 50% 0;
@@ -196,7 +197,6 @@ span {
   border-left: 1.8px solid #1a1a1a;
   margin-left: -1.2em;
 }
-
 .short-desc {
   font-size: 0.8em;
   width: 50%;
@@ -208,7 +208,6 @@ span {
 .year {
   color: #1a1a1a;
 }
-
 .wrapper-work {
   height: 100vh;
   width: 100vw;
@@ -221,6 +220,7 @@ span {
   margin-left: 7em;
   margin-top: -100vh;
   z-index: 2;
+  pointer-events: none;
 }
 .banner-inner {
   background-color: #1a1a1a;
@@ -282,10 +282,27 @@ span {
   object-fit: cover;
   z-index: 0;
 }
-
-.proj-img:hover + .video {
-  z-index: 2;
+.multimedia-container {
+  height: auto;
+  width: 100%;
+  position: relative;
+  z-index: 3;
 }
+.multimedia-container:hover > .video {
+  z-index: 4;
+}
+.proj-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.video {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transform: translateX(-100%);
+}
+
 .small-desc {
   position: relative;
   font-size: 0.8em;
@@ -436,22 +453,13 @@ span {
     width: fit-content;
   }
   .proj-img-wrapper {
-    position: relative;
     top: unset;
     right: unset;
     left: unset;
     padding-left: 15em;
-    height: auto;
+    /* height: auto; */
     min-width: 26em;
     width: 40%;
-  }
-  .proj-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-  .video {
-    display: none;
   }
   .proj2-text {
     position: relative;
@@ -476,7 +484,6 @@ span {
   }
   .proj2-firstImg {
     display: none;
-    /* background-color: antiquewhite; */
   }
   .proj3-text {
     padding-left: 15em;
