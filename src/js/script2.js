@@ -53,6 +53,7 @@ let tl4 = gsap.timeline({
     start: "top top",
     end: "bottom top",
     scrub: $banner,
+    toggleActions: "play pause resume reset",
     onRefresh: () => tl1.pause(),
   },
 });
@@ -67,6 +68,7 @@ tl2.to($marqueeInner, {
   xPercent: 25,
   ease: "linear",
   repeat: -1,
+  toggleActions: "play pause resume reset",
 });
 
 ScrollTrigger.create({
@@ -75,6 +77,7 @@ ScrollTrigger.create({
   endTrigger: "#divider",
   end: "bottom top",
   pin: $banner,
+  onKill: () => tl2.pause(0),
   onRefresh: () => tl2.pause(0),
   onEnter: () => tl2.play(),
   onLeave: () => tl2.pause(),
