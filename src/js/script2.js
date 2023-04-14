@@ -68,7 +68,6 @@ tl2.to($marqueeInner, {
   xPercent: 25,
   ease: "linear",
   repeat: -1,
-  toggleActions: "play pause resume reset",
 });
 
 ScrollTrigger.create({
@@ -77,12 +76,9 @@ ScrollTrigger.create({
   endTrigger: "#divider",
   end: "bottom top",
   pin: $banner,
+  toggleActions: "play pause resume reset",
   onKill: () => tl2.pause(0),
   onRefresh: () => tl2.pause(0),
-  onEnter: () => tl2.play(),
-  onLeave: () => tl2.pause(),
-  onEnterBack: () => tl2.resume(),
-  onLeaveBack: () => tl2.pause(),
 });
 
 gsap.to($container4, {
