@@ -50,7 +50,6 @@ let tl4 = gsap.timeline({
     endTrigger: "#divider",
     end: "20% top",
     scrub: $banner,
-    markers: true,
     onRefresh: () => tl1.pause(),
   },
 });
