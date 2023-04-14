@@ -21,7 +21,7 @@ tl.to($container, {
     scrub: true,
     start: "top top",
     pin: true,
-    markers: true,
+    end: "bottom center",
   },
   opacity: 0,
 });
@@ -45,10 +45,12 @@ tl1.to($bannerInner, {
 // opacity banner
 let tl4 = gsap.timeline({
   scrollTrigger: {
-    trigger: "#divider",
-    start: "top top",
-    end: "bottom top",
+    trigger: "#container2helper",
+    start: "center top",
+    endTrigger: "#divider",
+    end: "20% top",
     scrub: $banner,
+    markers: true,
     onRefresh: () => tl1.pause(),
   },
 });
