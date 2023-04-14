@@ -598,7 +598,6 @@ span {
   }
   .short-desc {
     width: 100%;
-    font-size: 2vh;
   }
   .proj1-text {
     padding-left: 5em;
@@ -654,7 +653,7 @@ span {
   .abt-img {
     width: 100vw;
     height: auto;
-    transform: translateY(-52vw);
+    transform: translateY(-74vw);
     z-index: 0;
   }
   .page-wrapper-horizontal-flex {
