@@ -1,15 +1,16 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+
 export default defineConfig({
   build: {
-    outDir: "dist",
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-        imprint: resolve(__dirname, "imprint.html"),
-        privacy: resolve(__dirname, "privacy.html"),
-        CV: resolve(__dirname, "assets/SonjaKuenzlCV.pdf"),
-        plantify: resolve(__dirname, "assets/plantify.pdf"),
+      // Make sure to externalize Three.js dependencies
+      external: ["three"],
+
+      output: {
+        // Provide global variables for Three.js dependencies
+        globals: {
+          three: "THREE",
+        },
       },
     },
   },

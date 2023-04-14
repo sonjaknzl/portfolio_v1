@@ -4,11 +4,11 @@ import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
 import { MathUtils } from "three";
 
 gsap.registerPlugin(ScrollTrigger);
-const glbModel = new URL("../assets/phone.glb", import.meta.url);
-const hdrTextureUrl = new URL("../assets/studio.hdr", import.meta.url);
+const glbModel = new URL("../phone.glb", import.meta.url);
+const hdrTextureUrl = new URL("../studio.hdr", import.meta.url);
 
-const screenTextureUrl = new URL("../assets/plantify.png", import.meta.url);
-const screenTextureUrl2 = new URL("../assets/plantify2.png", import.meta.url);
+const screenTextureUrl = new URL("../plantify.png", import.meta.url);
+const screenTextureUrl2 = new URL("../plantify2.png", import.meta.url);
 
 class Sketch {
   constructor(options) {
