@@ -6,7 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        fetch: resolve(__dirname, "fetch.html"),
+        fetch: resolve(__dirname, "imprint.html"),
         key: resolve(__dirname, "filename.html"),
       },
     },
