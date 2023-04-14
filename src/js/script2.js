@@ -1,3 +1,7 @@
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ ScrollTrigger";
+// Import the functions you need from the SDKs you need
+
 gsap.registerPlugin(ScrollTrigger);
 
 const $html = jQuery("html, body");
@@ -72,9 +76,12 @@ ScrollTrigger.create({
   endTrigger: "#divider",
   end: "bottom top",
   pin: $banner,
-  toggleActions: "play pause resume reset",
   onKill: () => tl2.pause(0),
   onRefresh: () => tl2.pause(0),
+  onEnter: () => tl2.play(),
+  onLeave: () => tl2.pause(),
+  onEnterBack: () => tl2.resume(),
+  onLeaveBack: () => tl2.pause(),
 });
 
 gsap.to($container4, {
