@@ -6,8 +6,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        fetch: resolve(__dirname, "imprint.html"),
-        key: resolve(__dirname, "filename.html"),
+        imprint: resolve(__dirname, "imprint.html"),
+        privacy: resolve(__dirname, "privacy.html"),
+        CV: resolve(__dirname, "SonjaKuenzlCV.pdf"),
+        plantify: resolve(__dirname, "plantify.pdf"),
       },
     },
   },
