@@ -122,7 +122,7 @@ class Sketch {
             start: "top top",
             endTrigger: "#container2helper",
             end: "center center",
-
+            toggleActions: "play pause resume reset",
             pin: true,
           },
         });
@@ -134,6 +134,7 @@ class Sketch {
             scrub: 1,
             start: "top top",
             end: "center center",
+            toggleActions: "play pause resume reset",
             onUpdate: (self) => {
               const loader = new THREE.TextureLoader();
               // console.log(self.progress);

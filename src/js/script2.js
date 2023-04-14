@@ -75,7 +75,6 @@ ScrollTrigger.create({
   endTrigger: "#divider",
   end: "bottom top",
   pin: $banner,
-  onKill: () => tl2.pause(0),
   onRefresh: () => tl2.pause(0),
   onEnter: () => tl2.play(),
   onLeave: () => tl2.pause(),
