@@ -3,7 +3,6 @@
 // Import the functions you need from the SDKs you need
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(TogglePlugin);
 
 const $html = jQuery("html, body");
 const $container = $("#container");
