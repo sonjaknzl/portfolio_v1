@@ -122,7 +122,7 @@ class Sketch {
             start: "top top",
             endTrigger: "#container2helper",
             end: "center center",
-            // toggleActions: "play pause resume reset",
+            toggleActions: "play pause resume reset",
             pin: true,
           },
         });
@@ -134,10 +134,9 @@ class Sketch {
             scrub: 1,
             start: "top top",
             end: "center center",
-            // toggleActions: "play pause resume reset",
+            toggleActions: "play pause resume reset",
             onUpdate: (self) => {
               const loader = new THREE.TextureLoader();
-              // console.log(self.progress);
               if (self.progress < 0.35) {
                 // TEXTURE SWAP
                 loader.load(
@@ -178,7 +177,6 @@ class Sketch {
   }
 
   render() {
-    // this.stats.update();
     requestAnimationFrame(this.render.bind(this));
     this.renderer.render(this.scene, this.camera);
   }
