@@ -13,7 +13,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-// opacity header
+// background video header
 let tl = gsap.timeline();
 tl.to($container, {
   scrollTrigger: {
@@ -21,6 +21,7 @@ tl.to($container, {
     scrub: true,
     start: "top top",
     pin: true,
+    markers: true,
   },
   opacity: 0,
 });
@@ -31,7 +32,6 @@ let tl1 = gsap.timeline({
     trigger: $banner,
     start: "top top",
     scrub: $banner,
-    // pin: ".banner",
     // markers: true,
   },
 });
@@ -65,19 +65,21 @@ tl2.to($marqueeInner, {
   repeat: -1,
 });
 
+// marquee banner
 ScrollTrigger.create({
   trigger: $banner,
   start: "top top",
   endTrigger: "#divider",
   end: "bottom top",
   pin: $banner,
-  onRefresh: () => tl2.play(),
+  onRefresh: () => tl2.resume(),
   onEnter: () => tl2.play(),
   onLeave: () => tl2.pause(),
   onEnterBack: () => tl2.resume(),
   onLeaveBack: () => tl2.pause(),
 });
 
+// background video footer
 gsap.to($container4, {
   scrollTrigger: {
     trigger: $container4,
