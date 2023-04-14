@@ -1,7 +1,3 @@
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ ScrollTrigger";
-// Import the functions you need from the SDKs you need
-
 gsap.registerPlugin(ScrollTrigger);
 
 const $html = jQuery("html, body");
@@ -53,7 +49,6 @@ let tl4 = gsap.timeline({
     start: "top top",
     end: "bottom top",
     scrub: $banner,
-    toggleActions: "play pause resume reset",
     onRefresh: () => tl1.pause(),
   },
 });
