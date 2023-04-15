@@ -20,6 +20,7 @@ body {
   color: whitesmoke;
   background-color: #1a1a1a;
   overflow-x: hidden !important;
+  width: 100vw;
 }
 canvas {
   z-index: -1;
@@ -152,6 +153,10 @@ span {
   margin-top: -50%;
   white-space: nowrap;
   text-align: center;
+}
+.wrapper-banner {
+  width: 100vw;
+  position: relative;
 }
 .rotation-wrapper-outer {
   position: relative;
