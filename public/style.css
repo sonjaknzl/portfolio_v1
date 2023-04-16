@@ -605,10 +605,10 @@ span {
     width: 100%;
   }
   .proj1-text {
-    padding-left: 5em;
+    padding-left: 4em;
   }
   .proj-img-wrapper {
-    padding-left: 5em;
+    padding-left: 4em;
     width: 65%;
     min-width: unset;
   }
@@ -618,7 +618,6 @@ span {
   .proj2-text {
     padding-left: 4em;
     width: 70%;
-    /* right: 4em; */
   }
   .proj2-img {
     height: 70vw;
@@ -633,15 +632,14 @@ span {
     display: none;
   }
   .proj3-text {
-    padding-left: 5em;
+    padding-left: 4em;
   }
   .addText-text {
     display: none;
   }
   .proj3-addText {
-    padding-left: 5em;
+    padding-left: 4em;
     padding-top: 2em;
-    /* width: 65%; */
   }
   #container3 > img {
     width: 9em;
@@ -666,19 +664,19 @@ span {
   }
   .abt-text-wrap {
     padding: unset;
-    padding-left: 5em;
+    padding-left: 2.8em;
     margin-top: 3em;
-    width: 60vw;
+    width: 75vw;
   }
   .abt-text-wrap > p {
     padding: 0em;
   }
-  .small-desc {
-    font-size: 0.6em;
-  }
   .banner-inner {
     padding: 0.5em 0em 0.4em 0.3em;
-    /* font-size: 0.8em; */
+  }
+  .year {
+    font-size: 1em;
+    padding-right: 0.2em;
   }
   p {
     font-size: 0.8em;
